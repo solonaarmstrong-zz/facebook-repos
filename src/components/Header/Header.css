@@ -1,0 +1,21 @@
+.Header {
+  background-color: #1a2947;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  color: #fff;
+  padding: 0 16px;
+}
+
+.Header-name,
+.Header-name a,
+.Header-name a:hover,
+.Header-name a:active,
+.Header-name a:visited {
+  font-family: 'Montez';
+  font-size: 36px;
+  color: #46bacf;
+  margin-right: 28px;
+}

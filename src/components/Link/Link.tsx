@@ -1,4 +1,5 @@
 import React from 'react';
+import './Link.css';
 
 interface Props {
   url: string;
