@@ -1,0 +1,10 @@
+.Sidebar {
+  width: 320px;
+  padding: 8px;
+  background-color: #e9ebee;
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  text-align: left;
+  color: #1d2129;
+  flex-grow: 1;
+}

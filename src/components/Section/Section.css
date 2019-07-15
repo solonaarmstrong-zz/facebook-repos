@@ -1,0 +1,11 @@
+.Section {
+  width: 100%;
+  background-color: #e9ebee;
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  padding: 8px;
+  margin-left: 16px;
+  text-align: left;
+  color: #1d2129;
+  flex-grow: 0;
+}

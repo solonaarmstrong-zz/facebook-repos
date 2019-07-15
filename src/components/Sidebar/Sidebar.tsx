@@ -1,18 +1,18 @@
 import React from 'react';
 import Link from '../Link/Link';
 
-export default class Sidebar extends React.Component<never, never>  {
-  renderLinks = () => {
-    return (
-      <Link url="test">test</Link>
-    )
-  }
+import './Sidebar.css';
 
-  render() {
-    return (
-      <aside>
-       {this.renderLinks}
-      </aside>
-    )
-  }
+export default function Sidebar() {
+  return (
+    <aside className="Sidebar">
+      {renderLinks()}
+    </aside>
+  )
+}
+
+function renderLinks() {
+  return (
+    <Link url="test">test</Link>
+  )
 }
