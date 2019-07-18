@@ -8,7 +8,7 @@ export default function Header() {
       <p className="Header-name">
         <Link url="http://www.solonaarmstrong.com">Solona</Link>
       </p>
-      <p>Facebook projects on GitHub</p>
+      <h1>Facebook projects on GitHub</h1>
     </header>
   )
 }

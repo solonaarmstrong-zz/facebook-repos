@@ -4,8 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 20px;
-  color: #fff;
   padding: 0 16px;
 }
 
@@ -18,4 +16,9 @@
   font-size: 36px;
   color: #46bacf;
   margin-right: 28px;
+}
+
+.Header h1 {
+  font-size: 24px;
+  color: #fff;
 }
