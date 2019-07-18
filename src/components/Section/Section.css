@@ -10,8 +10,18 @@
   flex-grow: 0;
 }
 
+.ContributorDescription {
+  display: flex;
+}
+
+hr.Section-BigDivider {
+  margin-block-start: 2rem;
+  border-top: 3px solid #a6a9b1;
+}
+
 hr {
   margin-block-start: 2rem;
+  margin-block-end: 2rem;
   border-top: 1px solid #c6c8ce;
 }
 

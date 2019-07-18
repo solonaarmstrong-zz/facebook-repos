@@ -6,7 +6,11 @@ export interface ActiveProject {
   id: Number
 }
 
+export interface Contributors {
+  contributors: any[]
+}
+
 export interface Action {
-  type: String
+  type: string
   payload: Object
 }

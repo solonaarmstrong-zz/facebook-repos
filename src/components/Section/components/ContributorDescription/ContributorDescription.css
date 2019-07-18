@@ -1,0 +1,13 @@
+.ContributorDescription {
+  display: flex;
+}
+
+.ContributorDescription-Details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.ContributorDescription-Details div {
+  margin-bottom: 8px;
+}

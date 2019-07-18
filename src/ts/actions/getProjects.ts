@@ -1,4 +1,4 @@
-import { GET_PROJECTS } from '../types/action-types';
+import { GET_PROJECTS } from '../store/constants';
 
 export default function getProjects(payload: Object) {
   return { 

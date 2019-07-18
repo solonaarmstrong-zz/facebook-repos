@@ -1,4 +1,4 @@
-import { SET_ACTIVE_PROJECT } from '../types/action-types';
+import { SET_ACTIVE_PROJECT } from '../store/constants';
 
 export default function setActiveProject(payload: Object) {
   return { 

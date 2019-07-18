@@ -1,4 +1,4 @@
-import { GET_PROJECTS, SET_ACTIVE_PROJECT } from '../types/action-types';
+import { GET_PROJECTS, SET_ACTIVE_PROJECT, GET_CONTRIBUTORS } from '../store/constants';
 import { Action } from '../types/types';
 
 const initialStateGetProjects = {
@@ -6,11 +6,19 @@ const initialStateGetProjects = {
 }
 
 const initialStateActiveProject = {
-  payload: 0
+  id: 0
+}
+
+const initialStateContributors = {
+  data: {}
 }
 
 export default function rootReducer(
-  state = {initialStateGetProjects, initialStateActiveProject},
+  state = {
+    initialStateGetProjects,
+    initialStateActiveProject,
+    initialStateContributors
+  },
   action: Action
 ) {
   if (action.type === GET_PROJECTS) {
@@ -21,7 +29,11 @@ export default function rootReducer(
     return Object.assign({}, state, {
       id: action.payload
     });
-  } 
+  } else if (action.type === GET_CONTRIBUTORS) {
+    return Object.assign({}, state, {
+      contributors: action.payload
+    });
+  }
 
   return state;
 }

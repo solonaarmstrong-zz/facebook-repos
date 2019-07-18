@@ -9,13 +9,15 @@ import SidebarLink from './components/SidebarLink/SidebarLink';
 
 import './Sidebar.css';
 
+const GITHUB_FACEBOOK_URL = 'https://api.github.com/users/facebook/repos';
+
 interface Props {
   payload: any[]
 }
 
 class Sidebar extends React.Component<Props, never> {
   componentDidMount() {
-    axios.get('https://api.github.com/users/facebook/repos')
+    axios.get(GITHUB_FACEBOOK_URL)
     .then(response => store.dispatch(getProjects(response.data)))
   }
 
