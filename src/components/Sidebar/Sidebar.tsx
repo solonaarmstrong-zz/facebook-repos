@@ -5,7 +5,7 @@ import { isEmpty, isEqual } from 'lodash';
 import store from '../../ts/store/store';
 import getProjects from '../../ts/actions/getProjects';
 import { ProjectDetails } from '../../ts/types/types';
-import Link from '../Link/Link';
+import SidebarLink from './components/SidebarLink/SidebarLink';
 
 import './Sidebar.css';
 import { linkSync } from 'fs';
@@ -26,7 +26,7 @@ class Sidebar extends React.Component<Props, never> {
 
     if (!isEmpty(payload)) {
       links = payload.map(projectData => {
-        return (<Link url="/" key={projectData.id}>{projectData.name}</Link>)
+        return (<SidebarLink url="/" key={projectData.id}>{projectData.name}</SidebarLink>)
       })
     }
 
