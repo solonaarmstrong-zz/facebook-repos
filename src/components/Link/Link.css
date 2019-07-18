@@ -1,6 +1,7 @@
 a,
 a:-webkit-any-link {
   color: #4267b2;
+  font-weight: bold;
   text-decoration: none;
   word-break: break-all;
 }
