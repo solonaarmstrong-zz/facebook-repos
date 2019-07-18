@@ -3,11 +3,12 @@ import './Link.css';
 
 interface Props {
   url: string;
+  target?: string; 
   children?: React.ReactNode;
 }
 
 export default function Link(props: Props) {
-  const { url, children } = props;
+  const { url, target = '_self', children } = props;
 
-  return <a href={url}>{children}</a>;
+  return <a href={url} target={target}>{children}</a>;
 }
