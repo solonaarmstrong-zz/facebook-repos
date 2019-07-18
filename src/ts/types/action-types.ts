@@ -1,1 +1,2 @@
 export const GET_PROJECTS = 'GET_PROJECTS';
+export const SET_ACTIVE_PROJECT = 'SET_ACTIVE_PROJECT';

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { isEmpty } from 'lodash';
 import store from '../../ts/store/store';
 import getProjects from '../../ts/actions/getProjects';
+import setActiveProject from '../../ts/actions/setActiveProject';
 import { ProjectDetails } from '../../ts/types/types';
 import SidebarLink from './components/SidebarLink/SidebarLink';
 
@@ -25,11 +26,24 @@ class Sidebar extends React.Component<Props, never> {
 
     if (!isEmpty(payload)) {
       links = payload.map(projectData => {
-        return (<SidebarLink url="/" key={projectData.id}>{projectData.name}</SidebarLink>)
+        return (
+          <SidebarLink
+            key={projectData.id}
+            id={projectData.id}
+            url="/"
+            onClick={this.onClickSidebarLink}
+          >
+            {projectData.name}
+          </SidebarLink>
+        )
       })
     }
 
     return links;
+  }
+
+  onClickSidebarLink = (id: Number) => {
+    store.dispatch(setActiveProject(id));
   }
 
   render() { 

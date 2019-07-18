@@ -1,10 +1,8 @@
-import { GET_PROJECTS } from './action-types';
-
 export interface ProjectDetails {
   payload: any[]
 }
 
-export interface GetProjectsAction {
+export interface Action {
   type: String
   payload: Object
 }

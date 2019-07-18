@@ -1,18 +1,27 @@
-import { GET_PROJECTS } from '../types/action-types';
-import { GetProjectsAction } from '../types/types';
+import { GET_PROJECTS, SET_ACTIVE_PROJECT } from '../types/action-types';
+import { Action } from '../types/types';
 
-const initialState = {
+const initialStateGetProjects = {
   payload: {}
 }
 
-function rootReducer(state = initialState, action: GetProjectsAction) {
+const initialStateActiveProject = {
+  payload: {}
+}
+
+export default function rootReducer(
+  state = {initialStateGetProjects, initialStateActiveProject},
+  action: Action
+) {
   if (action.type === GET_PROJECTS) {
     return Object.assign({}, state, {
       payload: action.payload
     });
-  }
+  } else if (action.type === SET_ACTIVE_PROJECT) {
+    return Object.assign({}, state, {
+      payload: action.payload
+    });
+  } 
 
   return state;
 }
-
-export default rootReducer;
