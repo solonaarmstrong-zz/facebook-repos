@@ -3,11 +3,16 @@
   background-color: #e9ebee;
   border: 1px solid #dddfe2;
   border-radius: 3px;
-  padding: 8px;
+  padding: 8px 20px;
   margin-left: 16px;
   text-align: left;
   color: #1d2129;
   flex-grow: 0;
+}
+
+hr {
+  margin-block-start: 2rem;
+  border-top: 1px solid #c6c8ce;
 }
 
 @media screen and (max-width: 700px) {

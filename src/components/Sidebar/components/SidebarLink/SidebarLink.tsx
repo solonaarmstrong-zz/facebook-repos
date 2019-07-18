@@ -1,19 +1,30 @@
 import React from 'react';
+import setActiveProject from '../../../../ts/actions/setActiveProject';
+import store from '../../../../ts/store/store';
+
 import './SidebarLink.css';
 
 interface Props {
   id: number;
   url: string;
   children?: React.ReactNode;
-  onClick(id: Number): void;
 }
 
-export default function SidebarLink(props: Props) {
-  const { id, url, children, onClick } = props;
+export default class SidebarLink extends React.Component<Props, never> {
+  handleClick = (event: React.MouseEvent) => {
+    const { id } = this.props;
 
-  return (
-    <div className="SidebarLink" onClick={() => id}>
-      <a href={url}>{children}</a>
-    </div>
-  )
+    event.preventDefault();
+    store.dispatch(setActiveProject(id));
+  }
+
+  render() {
+    const { url, children } = this.props;
+
+    return (
+      <div className="SidebarLink" onClick={this.handleClick}>
+        <a href={url}>{children}</a>
+      </div>
+    )
+  }
 }

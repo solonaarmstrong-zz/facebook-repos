@@ -15,9 +15,7 @@ const App: React.FC = () => {
         <Header />
         <Main>
           <Sidebar />
-          <Section>
-            Stuff
-          </Section>
+          <Section />
         </Main>
       </div>
     </Provider>

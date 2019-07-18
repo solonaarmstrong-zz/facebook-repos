@@ -6,7 +6,7 @@ const initialStateGetProjects = {
 }
 
 const initialStateActiveProject = {
-  payload: {}
+  payload: 0
 }
 
 export default function rootReducer(
@@ -19,7 +19,7 @@ export default function rootReducer(
     });
   } else if (action.type === SET_ACTIVE_PROJECT) {
     return Object.assign({}, state, {
-      payload: action.payload
+      id: action.payload
     });
   } 
 
