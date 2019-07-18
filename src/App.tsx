@@ -1,4 +1,6 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './ts/store/store';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Main from './components/Main/Main';
@@ -8,15 +10,17 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Header />
-      <Main>
-        <Sidebar />
-        <Section>
-          Stuff
-        </Section>
-      </Main>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <Main>
+          <Sidebar />
+          <Section>
+            Stuff
+          </Section>
+        </Main>
+      </div>
+    </Provider>
   );
 }
 

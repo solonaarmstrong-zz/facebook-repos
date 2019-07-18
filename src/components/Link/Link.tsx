@@ -9,5 +9,9 @@ interface Props {
 export default function Link(props: Props) {
   const { url, children } = props;
 
-  return <a href={url}>{children}</a>;
+  return (
+    <div className="Link">
+      <a href={url}>{children}</a>
+    </div>
+  )
 }
