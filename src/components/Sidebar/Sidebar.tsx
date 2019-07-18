@@ -1,14 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { isEmpty, isEqual } from 'lodash';
+import { isEmpty } from 'lodash';
 import store from '../../ts/store/store';
 import getProjects from '../../ts/actions/getProjects';
 import { ProjectDetails } from '../../ts/types/types';
 import SidebarLink from './components/SidebarLink/SidebarLink';
 
 import './Sidebar.css';
-import { linkSync } from 'fs';
 
 interface Props {
   payload: any[]
