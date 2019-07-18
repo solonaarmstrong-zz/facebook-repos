@@ -12,3 +12,9 @@
 .Sidebar h2 {
   color: #1a2947;
 }
+
+@media screen and (max-width: 700px) {
+  .Sidebar {
+    width: 100%;
+  }
+}

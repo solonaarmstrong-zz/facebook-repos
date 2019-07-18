@@ -9,3 +9,10 @@
   color: #1d2129;
   flex-grow: 0;
 }
+
+@media screen and (max-width: 700px) {
+  .Section {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
