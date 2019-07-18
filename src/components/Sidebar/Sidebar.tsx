@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { isEmpty, sortBy } from 'lodash';
+import { isEmpty, sortBy, reverse } from 'lodash';
 import store from '../../ts/store/store';
 import getProjects from '../../ts/actions/getProjects';
 import { ProjectDetails } from '../../ts/types/types';
@@ -28,7 +28,7 @@ class Sidebar extends React.Component<Props, never> {
     if (!isEmpty(payload)) {
       const sortedPayload = sortBy(payload, ['watchers']);
 
-      links = sortedPayload.map(projectData => {
+      links = reverse(sortedPayload).map(projectData => {
         return (
           <SidebarLink
             key={projectData.id}
